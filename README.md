@@ -49,6 +49,8 @@ Obscene
 Threat
 Insult
 Identity Hate
+
+
 ⚙️ System Workflow
 Data Collection
 Data Preprocessing
@@ -83,6 +85,8 @@ Accuracy   98.5%
 Precision  80.68%
 Recall     76.39%
 F1-Score   78.47%
+
+
 💡 Applications
 Social Media Moderation
 Online Community Monitoring
