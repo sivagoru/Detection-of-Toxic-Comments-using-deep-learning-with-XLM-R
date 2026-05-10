@@ -1,5 +1,4 @@
 # Detection-of-Toxic-Comments-using-deep-learning-with-XLM-R
-Toxic Comment Detection using Deep Learning with XLM-R
 
 A multilingual Toxic Comment Detection system developed using Deep Learning and the XLM-RoBERTa (XLM-R) transformer model to identify toxic, abusive, offensive, and harmful comments from online platforms and social media.
 
