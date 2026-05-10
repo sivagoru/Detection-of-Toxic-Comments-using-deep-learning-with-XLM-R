@@ -89,8 +89,11 @@ Enhanced performance compared to traditional ML models
 Evaluation Metrics:
 
 Accuracy   98.5%
+
 Precision  80.68%
+
 Recall     76.39%
+
 F1-Score   78.47%
 
 
