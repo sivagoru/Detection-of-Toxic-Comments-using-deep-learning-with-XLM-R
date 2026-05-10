@@ -14,6 +14,8 @@ To overcome these limitations, this project uses the XLM-R transformer model, a 
 The model is trained using the Jigsaw Toxic Comment Classification dataset and can classify comments into toxic and non-toxic categories.
 
 🎯 Objectives
+
+
 Detect toxic and abusive comments automatically
 Improve multilingual text understanding using XLM-R
 Reduce harmful online interactions
@@ -22,6 +24,8 @@ Enhance contextual understanding of comments
 
 
 🧠 Technologies Used
+
+
 Python
 Deep Learning
 Natural Language Processing (NLP)
@@ -52,6 +56,8 @@ Identity Hate
 
 
 ⚙️ System Workflow
+
+
 Data Collection
 Data Preprocessing
 Text Cleaning
@@ -62,6 +68,8 @@ Evaluation and Prediction
 Deployment
 
 🔥 Key Features
+
+
 Multilingual toxic comment detection
 Transformer-based Deep Learning model
 Context-aware text classification
@@ -88,6 +96,8 @@ F1-Score   78.47%
 
 
 💡 Applications
+
+
 Social Media Moderation
 Online Community Monitoring
 Chat Filtering Systems
@@ -96,6 +106,8 @@ Comment Monitoring Platforms
 AI-based Content Moderation
 
 📈 Future Enhancements
+
+
 Real-time browser extension integration
 Voice toxicity detection
 Multi-label classification improvements
