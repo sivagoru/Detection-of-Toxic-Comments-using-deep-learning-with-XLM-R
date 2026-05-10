@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "AI Toxic Comment Dashboard",
+  "version": "1.0",
+  "description": "Detect toxic comments on YouTube, Facebook, Instagram in real-time",
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "http://127.0.0.1:5000/*",
+    "http://localhost:5000/*",
+    "https://www.youtube.com/*",
+    "https://www.facebook.com/*",
+    "https://www.instagram.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://www.facebook.com/*",
+        "https://www.instagram.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "libs/chart.min.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+
+  "action": {
+    "default_title": "Toxic Comment Dashboard"
+  },
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

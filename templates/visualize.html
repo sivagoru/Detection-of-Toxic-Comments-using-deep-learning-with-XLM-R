@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Toxic Comment Visualization</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>Toxic Comment Analysis Dashboard</h1>
+
+<div class="stats">
+
+<h3>Total Comments: <span id="total"></span></h3>
+<h3>Toxic Comments: <span id="toxic"></span></h3>
+<h3>Safe Comments: <span id="safe"></span></h3>
+
+</div>
+
+
+<h2>Toxic vs Safe</h2>
+
+<canvas id="toxicityChart" width="400" height="200"></canvas>
+
+
+<h2>Toxic Categories</h2>
+
+<canvas id="categoryChart" width="400" height="200"></canvas>
+
+
+<h2>Analyzed Comments</h2>
+
+<table border="1">
+
+<thead>
+
+<tr>
+<th>Comment</th>
+<th>Label</th>
+<th>Probability</th>
+</tr>
+
+</thead>
+
+<tbody id="commentTable">
+
+</tbody>
+
+</table>
+
+
+<script>
+
+fetch("/comment_stats")
+.then(res => res.json())
+.then(data => {
+
+document.getElementById("total").innerText = data.total_comments
+document.getElementById("toxic").innerText = data.toxic
+document.getElementById("safe").innerText = data.safe
+
+
+const ctx1 = document.getElementById("toxicityChart")
+
+new Chart(ctx1, {
+type: "pie",
+data: {
+labels: ["Toxic", "Safe"],
+datasets: [{
+data: [data.toxic, data.safe],
+backgroundColor: ["red", "green"]
+}]
+}
+})
+
+
+const ctx2 = document.getElementById("categoryChart")
+
+new Chart(ctx2, {
+type: "bar",
+data: {
+labels: ["Insult", "Obscene", "Threat", "Identity Hate"],
+datasets: [{
+label: "Toxic Categories",
+data: [
+data.insult,
+data.obscene,
+data.threat,
+data.identity_hate
+],
+backgroundColor: "orange"
+}]
+}
+})
+
+})
+
+
+fetch("/comments")
+.then(res => res.json())
+.then(data => {
+
+let table = document.getElementById("commentTable")
+
+data.forEach(c => {
+
+let row = `
+<tr>
+<td>${c.comment}</td>
+<td>${c.label}</td>
+<td>${c.probability.toFixed(2)}</td>
+</tr>
+`
+
+table.innerHTML += row
+
+})
+
+})
+
+</script>
+
+</body>
+
+</html>

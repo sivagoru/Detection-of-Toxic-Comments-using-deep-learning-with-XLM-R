@@ -1,0 +1,167 @@
+[
+  {
+    "comment": "hello",
+    "label": "safe",
+    "scores": {
+      "identity_hate": 0.00012884115858469158,
+      "insult": 0.0002462565607856959,
+      "obscene": 0.00039033216307871044,
+      "severe_toxic": 8.952767529990524e-05,
+      "threat": 7.066958642099053e-05,
+      "toxic": 0.0009779059328138828
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Rooba Rooba Video Song | Orange Movie Video Songs | Ram charan | Genelia | Vega Music",
+    "timestamp": "2026-04-18 17:17:19"
+  },
+  {
+    "comment": "hello",
+    "label": "safe",
+    "scores": {
+      "identity_hate": 0.00012884115858469158,
+      "insult": 0.0002462565607856959,
+      "obscene": 0.00039033216307871044,
+      "severe_toxic": 8.952767529990524e-05,
+      "threat": 7.066958642099053e-05,
+      "toxic": 0.0009779059328138828
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Rooba Rooba Video Song | Orange Movie Video Songs | Ram charan | Genelia | Vega Music",
+    "timestamp": "2026-04-18 17:17:34"
+  },
+  {
+    "comment": "hello",
+    "label": "safe",
+    "scores": {
+      "identity_hate": 0.00012884115858469158,
+      "insult": 0.0002462565607856959,
+      "obscene": 0.00039033216307871044,
+      "severe_toxic": 8.952767529990524e-05,
+      "threat": 7.066958642099053e-05,
+      "toxic": 0.0009779059328138828
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Rooba Rooba Video Song | Orange Movie Video Songs | Ram charan | Genelia | Vega Music",
+    "timestamp": "2026-04-18 17:21:43"
+  },
+  {
+    "comment": "Go suck a d*** you useless troll",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.04493150860071182,
+      "insult": 0.8511407971382141,
+      "obscene": 0.9067400097846985,
+      "severe_toxic": 0.06597689539194107,
+      "threat": 0.00392173370346427,
+      "toxic": 0.9757246375083923
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Rooba Rooba Video Song | Orange Movie Video Songs | Ram charan | Genelia | Vega Music",
+    "timestamp": "2026-04-18 17:22:22"
+  },
+  {
+    "comment": "fuck you",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.007256228011101484,
+      "insult": 0.8299315571784973,
+      "obscene": 0.9853609204292297,
+      "severe_toxic": 0.20704995095729828,
+      "threat": 0.007220120169222355,
+      "toxic": 0.9923433661460876
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Aarya-2 - Uppenantha Video | Allu Arjun | Devi Sri Prasad",
+    "timestamp": "2026-04-18 17:32:42"
+  },
+  {
+    "comment": "hate you",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.00598012562841177,
+      "insult": 0.14198119938373566,
+      "obscene": 0.01557363010942936,
+      "severe_toxic": 0.0006444811588153243,
+      "threat": 0.0022944610100239515,
+      "toxic": 0.6909464597702026
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Ravi Teja Venky Movie Latest Hillarious Comedy Scenes || Venky Movie || ‪@iDreamBuzz‬",
+    "timestamp": "2026-04-19 07:58:49"
+  },
+  {
+    "comment": "hate you",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.008400825783610344,
+      "insult": 0.14488637447357178,
+      "obscene": 0.010560130700469017,
+      "severe_toxic": 0.0005774067249149084,
+      "threat": 0.0021318935323506594,
+      "toxic": 0.6578492522239685
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Switzerland in 8K ULTRA HD - Heaven of Earth (60 FPS)",
+    "timestamp": "2026-04-19 14:34:38"
+  },
+  {
+    "comment": "hate you",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.008400825783610344,
+      "insult": 0.14488637447357178,
+      "obscene": 0.010560130700469017,
+      "severe_toxic": 0.0005774067249149084,
+      "threat": 0.0021318935323506594,
+      "toxic": 0.6578492522239685
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Switzerland in 8K ULTRA HD - Heaven of Earth (60 FPS)",
+    "timestamp": "2026-04-19 14:35:15"
+  },
+  {
+    "comment": "hate you",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.008400825783610344,
+      "insult": 0.14488637447357178,
+      "obscene": 0.010560130700469017,
+      "severe_toxic": 0.0005774067249149084,
+      "threat": 0.0021318935323506594,
+      "toxic": 0.6578492522239685
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Switzerland in 8K ULTRA HD - Heaven of Earth (60 FPS)",
+    "timestamp": "2026-04-19 14:35:22"
+  },
+  {
+    "comment": "You are an idiot.",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.027909737080335617,
+      "insult": 0.8387232422828674,
+      "obscene": 0.4061185121536255,
+      "severe_toxic": 0.012833870947360992,
+      "threat": 0.001838934957049787,
+      "toxic": 0.9446032643318176
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Larsen & Toubro, HCl, Virtusa Offcampus Hiring | BE/BTECH/BBA",
+    "timestamp": "2026-05-05 12:30:11"
+  },
+  {
+    "comment": "r u stupid",
+    "label": "toxic",
+    "scores": {
+      "identity_hate": 0.014793744310736656,
+      "insult": 0.7859093546867371,
+      "obscene": 0.36225855350494385,
+      "severe_toxic": 0.008608333766460419,
+      "threat": 0.001561774522997439,
+      "toxic": 0.9323289394378662
+    },
+    "platform": "www.youtube.com",
+    "page_title": "Deloitte NLA, TCS, Infosys Hiring & Exam Update",
+    "timestamp": "2026-05-05 16:29:02"
+  }
+]

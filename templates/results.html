@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Prediction Result</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<h1>Prediction Result</h1>
+
+<div id="result"></div>
+
+<a href="/">Back</a>
+
+<script>
+
+const data = JSON.parse(localStorage.getItem("prediction"));
+
+document.getElementById("result").innerHTML =
+"Comment : " + data.text +
+"<br>Label : " + data.label +
+"<br>Toxicity Score : " + data.toxicity_score;
+
+</script>
+
+</body>
+</html>

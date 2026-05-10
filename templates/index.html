@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Toxic Comment Detector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+margin:0;
+overflow:hidden;
+font-family:sans-serif;
+}
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#0f172a,#1e1b4b,#000);
+z-index:-1;
+}
+
+.glass-card{
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.social-icons i{
+transition:0.3s;
+}
+
+.social-icons i:hover{
+transform:scale(1.3);
+}
+</style>
+</head>
+
+<body class="text-white flex flex-col items-center justify-center min-h-screen px-6">
+
+<div id="particles-js"></div>
+
+<div class="text-center mb-8">
+<h1 class="text-5xl font-extrabold mb-2">🛡️ Toxic Comment Detector</h1>
+</div>
+
+<div class="glass-card w-full max-w-xl rounded-2xl p-6 shadow-2xl flex flex-col items-center">
+
+<textarea id="inputText" rows="3"
+class="w-full p-3 rounded-xl text-black focus:outline-none"
+placeholder="Type a comment..."></textarea>
+
+<button onclick="checkToxicity()"
+class="mt-4 px-8 py-2.5 bg-purple-600 hover:bg-purple-700 transition rounded-xl">
+🚀 Check Toxicity
+</button>
+
+<div id="result" class="mt-5 text-xl font-semibold text-center"></div>
+
+</div>
+
+<footer class="mt-12 text-center">
+
+<div class="flex gap-10 justify-center text-4xl social-icons">
+
+<a href="https://www.youtube.com" target="_blank" class="text-red-500">
+<i class="fab fa-youtube"></i>
+</a>
+
+<a href="https://www.facebook.com" target="_blank" class="text-blue-500">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://www.instagram.com" target="_blank" class="text-pink-500">
+<i class="fab fa-instagram"></i>
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+const API_URL = "http://127.0.0.1:5000/predict";
+
+async function checkToxicity(){
+
+const text = document.getElementById("inputText").value.trim();
+const resDiv = document.getElementById("result");
+
+if(!text){
+resDiv.innerHTML = "⚠️ Please enter a comment";
+return;
+}
+
+resDiv.innerText = "Checking...";
+
+try{
+
+const response = await fetch(API_URL,{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({text:text})
+});
+
+const data = await response.json();
+
+if(data.error){
+resDiv.innerHTML = "❌ Server Error";
+return;
+}
+
+if(data.label==="toxic"){
+resDiv.innerHTML = "⚠️ <span class='text-red-400'>Toxic Comment</span>";
+}else{
+resDiv.innerHTML = "✅ <span class='text-green-400'>Safe Comment</span>";
+}
+
+}catch(err){
+console.log(err);
+resDiv.innerText="Server connection error";
+}
+
+}
+
+</script>
+
+<script>
+
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+color:{value:"#ffffff"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+line_linked:{
+enable:true,
+distance:150,
+color:"#ffffff",
+opacity:0.4,
+width:1
+},
+move:{
+enable:true,
+speed:2
+}
+}
+})
+
+</script>
+
+</body>
+</html>
